@@ -12,24 +12,38 @@
         
         </div>
         <div class="buttons">
-            <button class="seven" onclick="findNum('7')">7</button>
-            <button class="eight" onclick="findNum('8')">8</button>
-            <button class="nine" onclick="findNum('9')">9</button>
-            <button class="four" onclick="findNum('4')">4</button>
-            <button class="five" onclick="findNum('5')">5</button>
-            <button class="six" onclick="findNum('6')">6</button>
-            <button class="one" onclick="findNum('1')">1</button>
-            <button class="two" onclick="findNum('2')">2</button>
-            <button class="three" onclick="findNum('3')">3</button>
-            <button class="zero" onclick="findNum('0')">0</button>
-            <button class="point" onclick="findNum('.')">.</button>
-            <button class="equals" onclick="calculate()">=</button>
-            <button class="clear" onclick="clearAll()">C</button>
-            <button class="plus" onclick="findNum('+')">+</button>
-            <button class="less" onclick="findNum('-')">-</button>
-            <button class="times" onclick="findNum('X')">X</button>
-            <button class="divide" onclick="findNum('÷')">/</button>
-            <button class="reset" onclick="reset()"></button>
+            <div>
+                <button class="clearOrTurnOn --rounded redButton" onclick="clearAll()">ON/CE</button>
+                <button class="off" onclick="turnOff()">OFF</button>
+                <button class="seven" onclick="findNum('7')">7</button>
+                <button class="four" onclick="findNum('4')">4</button>
+                <button class="one" onclick="findNum('1')">1</button>
+                <button class="zero" onclick="findNum('0')">0</button>
+            </div>
+            <div>
+                <button class="memoryRecall --rounded" onclick="recallMemory()">MRC</button>
+                <button class="square" onclick="findNum('√')">√</button>
+                <button class="eight" onclick="findNum('8')">8</button>
+                <button class="five" onclick="findNum('5')">5</button>
+                <button class="two" onclick="findNum('2')">2</button>
+                <button class="point" onclick="findNum('.')">.</button>
+            </div>
+            <div>
+                <button class="memoryMinus --rounded" onclick="findNum('M-')">M-</button>
+                <button class="percentage" onclick="findNum('%')">%</button>
+                <button class="nine" onclick="findNum('9')">9</button>
+                <button class="six" onclick="findNum('6')">6</button>
+                <button class="three" onclick="findNum('3')">3</button>
+                <button class="equals" onclick="calculate()">=</button>
+            </div>
+            <div>
+                <button class="memoryPlus --rounded" onclick="findNum('M+')">M+</button>
+                <button class="divide" onclick="findNum('÷')">÷</button>
+                <button class="times" onclick="findNum('X')">X</button>
+                <button class="less" onclick="findNum('-')">-</button>
+                <button class="plus" onclick="findNum('+')">+</button>
+                <button class="reset redButton" onclick="reset()"><</button>
+            </div>
         </div>   
     </div>
 </body>
