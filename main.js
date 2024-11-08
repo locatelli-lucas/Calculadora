@@ -6,6 +6,7 @@ let count = 0;
 let memory = '';
 let element = document.getElementById("memo");
 element.hidden = true;
+
 function findNum(digit) {
     if(!verify)
         clearAll();
@@ -16,6 +17,62 @@ function findNum(digit) {
     display.appendChild(writer);
     list.push(digit);
 }
+
+document.addEventListener("keydown", (e) => {
+    switch (e.key) {
+        case '0':
+            findNum('0');
+            break;
+        case '1':
+            findNum('1');
+            break;
+        case '2':
+            findNum('2');
+            break;
+        case '3':
+            findNum('3');
+            break;
+        case '4':
+            findNum('4');
+            break;
+        case '5':
+            findNum('5');
+            break;
+        case '6':
+            findNum('6');
+            break;
+        case '7':
+            findNum('7');
+            break;
+        case '8':
+            findNum('8');
+            break;
+        case '9':
+            findNum('9');
+            break;
+        case 'Enter':
+            calculate();
+            break;
+        case '-':
+            findNum('-');
+            break;
+        case '+':
+            findNum('+');
+            break;
+        case '*':
+            findNum('X');
+            break;
+        case '/':
+            findNum('÷');
+            break;
+        case '.':
+            findNum('.');
+            break;
+        case 'Backspace':
+            reset();
+            break;
+    }
+})
 
 function calculate() {
 
