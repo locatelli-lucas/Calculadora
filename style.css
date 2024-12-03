@@ -55,8 +55,8 @@ body {
 .reset {
     padding: 5px 0 0 10px;
     position: absolute;
-    bottom: 13.7em;
-    right: 43.5em;
+    bottom: 13.4em;
+    right: 44.5em;
     width: 8.9vw !important;
 }
 
@@ -91,7 +91,7 @@ body {
     font-family: '2Bit', 'Times New Roman', Times, serif;
     position: absolute;
     font-size: 0.8em;
-    left: 60.5em;
+    left: 62em;
     top: 15em;
     z-index: 10;
 }

@@ -1,9 +1,8 @@
 let list = [];
 const display = document.getElementById('display');
 let verify = true;
-let on = false;
 let count = 0;
-let memory = '';
+let memory = [];
 let element = document.getElementById("memo");
 element.hidden = true;
 
@@ -75,7 +74,6 @@ document.addEventListener("keydown", (e) => {
 })
 
 function calculate() {
-
     let indexTimes = list.indexOf('X');
     list[indexTimes] = '*';
     let indexDivide = list.indexOf('÷');
@@ -89,6 +87,7 @@ function calculate() {
 }
 
 function clearAll() {
+    memory = [...list]
     display.innerHTML = " "
     list = []
     verify = true
@@ -103,14 +102,15 @@ function recallMemory() {
     count++;
 
     if(count === 1) {
-        clearAll();
-        list.push(String(memory));
+        if(list.length > 0)
+            clearAll();
+        list = [...memory];
         let writer = document.createElement('div');
         writer.innerHTML = String(memory);
         display.appendChild(writer);
         element.hidden = false;
     } else if(count === 2) {
-        memory = '';
+        memory = [];
         count = 0;
         element.hidden = true;
     }
